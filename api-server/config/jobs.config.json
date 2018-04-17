@@ -1,0 +1,20 @@
+{
+  "jobs": [
+    {
+      "name": "JOB_A",
+      "script": "scripts/process_file.sh $file &&  scripts/s3upload.sh -c /data/cassandra/s3cfg_aws $job $file && rm $file"
+    },
+    {
+      "name": "JOB_B",
+      "script": "scripts/process_file.sh $file &&  scripts/s3upload.sh -c /data/cassandra/s3cfg_aws $job $file"
+    },
+     {
+      "name": "JOB_C",
+      "script": "echo \"pwd: `pwd`\" >> /tmp/bdr.log ; rm $file"
+    },
+    {
+      "name": "join",
+      "script": "join.sh"
+    }
+  ]
+}

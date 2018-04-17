@@ -1,0 +1,13 @@
+{
+  "DATA_BACKEND": "nedb",
+
+  "NODE_ENV": "development",
+
+  "CONCURRENCY": 4,
+
+  "TASK_TIMEOUT": 7200,
+
+  "DELETE_FILE": false,
+
+  "MAX_QUEUE_SIZE": 20
+}
